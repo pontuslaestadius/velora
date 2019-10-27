@@ -30,7 +30,7 @@ def list_paths(config):
                 # our last successful scan. And is of an allowed file type.
                 if stat.st_size < max_size and (stat.st_mtime > finished or stat.st_ctime > finished) and path.suffix.lower() in allowed_suffixes and os.path.isfile(path):
                     for key in config["suffixes"]:
-                        if path.suffix.lower() in CONFIG["suffixes"][key]:
+                        if path.suffix.lower() in config["suffixes"][key]:
                             files.append({"path": path, "html_tag": key})
                             break
 

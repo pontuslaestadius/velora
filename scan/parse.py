@@ -47,10 +47,10 @@ def resolve_tags(path, base, parent_root):
     return tags
 
 
-def resolve_thumbnail(path, hash, thumbnail_path):
+def resolve_thumbnail(path, hash, thumbnail_path, img):
     """Resolves thumbnail for PATH."""
 
-    out_path = "{}/{}.jpg".format(thumbnail_path, document["hash"])
+    out_path = "{}/{}.jpg".format(thumbnail_path, hash)
     if not os.path.exists(out_path):
         size = 128, 128
         img.thumbnail(size)
@@ -76,7 +76,7 @@ def doc(str_path, document, parent_root, thumbnail_path):
 
         document.update({
             "identified_text": text.get_text(img),
-            "thumbnail": resolve_thumbnail(new_path, document["hash"], thumbnail_path)
+            "thumbnail": resolve_thumbnail(new_path, document["hash"], thumbnail_path, img)
         })
 
     except Exception as e:
