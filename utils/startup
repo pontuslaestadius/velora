@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+[ ! -d "${DBPATH}" ] && mkdir "${DBPATH}"
+
+mongod --dbpath "${DBPATH}" > /dev/null &
+cd rocket
+cargo run

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -ex
+
+[ ! -d "${BASE_DIR}" ] && mkdir "${BASE_DIR}"
+
+sudo apt-get install pylint
+rustup update && cargo update
+rustup default nightly
+rustup component add rustfmt --toolchain nightly

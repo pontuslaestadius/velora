@@ -1,0 +1,7 @@
+
+ROCKET_CLI_COLORS=off
+RUST_BACKTRACE=1
+BASE_DIR="${HOME}/.velora"
+DBPATH="${BASE_DIR}/db"
+
+PS1="> "
