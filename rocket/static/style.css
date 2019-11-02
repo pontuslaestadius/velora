@@ -1,0 +1,45 @@
+.grid-container {
+    display: grid | inline-grid;
+}
+.identified-text {
+    white-space: pre-line;
+}
+.search-form {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+a {
+    text-decoration: none;
+}
+.w3-content {
+    max-width: 614px;
+    width: 100%;
+    margin-top: 86px;
+}
+.ve-textbox {
+    max-height: 300px;
+    overflow: hidden;
+    transition: .3s;
+}
+.ve-textbox:hover {
+    max-height: none;
+}
+.ve-thumb img {
+    height: 128px;
+    width: 128px;
+    border-radius: 14px;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    margin-bottom: 28px;
+}
+.ve-fi {
+    display: flex;
+    flex-wrap: wrap;
+}

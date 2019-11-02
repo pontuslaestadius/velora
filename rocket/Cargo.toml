@@ -1,0 +1,18 @@
+[package]
+name = "Velora"
+version = "0.1.0"
+authors = ["Pontus Laestadius <pontus.laestadius@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+mongodb = "0.4.0"
+rocket = "0.4.2"
+serde = { version = "1.0", features = ["derive"] }
+tera = "*"
+config = "0.9.3"
+lazy_static = "*"
+glob = "*"
+
+[dependencies.rocket_contrib]
+version = "*"
+features = ["tera_templates"]
